@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VOYAGEUR — Handcrafted luxury travel, iconic global expeditions, 5-star retreats, and bespoke itineraries across 7 continents." />
+  <meta name="keywords" content="travel, luxury vacations, tours, travel packages, amalfi, kyoto, safari, iceland, expeditions" />
+  <title>VOYAGEUR — Curated Global Journeys & Luxury Expeditions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <span>✨ 2026 Expeditions Booking Now Open &bull; Use code <strong>VOYAGE15</strong> for 15% off bespoke packages</span>
+      <span class="announcement-perk">🌿 100% Carbon-Neutral Travel Guaranteed</span>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="VOYAGEUR Home">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">VOYAGEUR</span>
+          <span class="brand-tagline">EXPEDITIONS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#catalog-section" class="nav-link">Expeditions</a>
+        <a href="#matchmaker-section" class="nav-link">Trip Matchmaker</a>
+        <a href="#packing-section" class="nav-link">Packing Tool</a>
+        <a href="#reviews-section" class="nav-link">Reviews</a>
+        <a href="#journal-section" class="nav-link">Journal</a>
+        <a href="#faq-section" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Nav Actions (Currency, Theme, Bucket List, CTA) -->
+      <div class="header-actions">
+        <!-- Currency Converter Switcher -->
+        <div class="currency-wrapper" title="Select Display Currency">
+          <label for="currency-select" class="sr-only">Currency</label>
+          <select id="currency-select" class="currency-select" aria-label="Currency Selector">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="AUD">AUD (A$)</option>
+            <option value="JPY">JPY (¥)</option>
+          </select>
+        </div>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="theme-toggle-btn" class="icon-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          🌙
+        </button>
+
+        <!-- Bucket List / Saved Trips Button -->
+        <button id="open-bucket-btn" class="icon-btn bucket-btn" aria-label="Open Bucket List" title="Saved Bucket List">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="bucket-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#catalog-section" class="btn btn-primary btn-nav-cta">
+          Explore Trips
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="mobile-hamburger" aria-label="Toggle Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-chip animate-fade-in">
+            <span class="chip-dot"></span>
+            Curated Journeys for Discerning Explorers
+          </div>
+          <h1 class="hero-title animate-fade-in">
+            Discover The World’s Most <span class="gradient-text">Extraordinary</span> Places
+          </h1>
+          <p class="hero-subtitle animate-fade-in">
+            Handcrafted luxury itineraries, private chartered cruises, alpine chalets, and untamed wildlife safaris across 7 continents.
+          </p>
+        </div>
+
+        <!-- Interactive Search / Filter Bar -->
+        <div class="hero-search-card animate-slide-up">
+          <form class="hero-search-grid" id="hero-search-form" onsubmit="event.preventDefault();">
+            
+            <div class="search-field">
+              <label for="hero-input-dest" class="field-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Destination
+              </label>
+              <input type="text" id="hero-input-dest" class="field-input" placeholder="e.g. Italy, Kyoto, Safari..." />
+            </div>
+
+            <div class="search-field">
+              <label for="hero-select-style" class="field-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                Experience Style
+              </label>
+              <select id="hero-select-style" class="field-select">
+                <option value="all">All Styles & Landscapes</option>
+                <option value="beach">Tropical & Coastal</option>
+                <option value="mountain">Mountain & Snow</option>
+                <option value="cultural">Cultural & Heritage</option>
+                <option value="safari">Safari & Wildlife</option>
+                <option value="nordic">Nordic & Arctic</option>
+                <option value="desert">Desert & Oasis</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="hero-select-budget" class="field-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                Max Budget / Person
+              </label>
+              <select id="hero-select-budget" class="field-select">
+                <option value="5000">Any Budget</option>
+                <option value="2000">Under $2,000</option>
+                <option value="2600">Under $2,600</option>
+                <option value="3500">Under $3,500</option>
+                <option value="4500">Under $4,500</option>
+              </select>
+            </div>
+
+            <div class="search-field search-action">
+              <button type="submit" id="hero-search-submit" class="btn btn-primary btn-search-hero">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Find Expeditions</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Trust Metric Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-number">120+</span>
+            <span class="metric-label">Curated Destinations</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">45k+</span>
+            <span class="metric-label">Happy Explorers</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">4.96★</span>
+            <span class="metric-label">Traveler Rating</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">24/7</span>
+            <span class="metric-label">Concierge Support</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Voyageur (USPs) -->
+    <section class="section section-why-us" id="why-us">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">The Voyageur Difference</span>
+          <h2 class="section-title">Designed for Unrivaled Discovery</h2>
+          <p class="section-subtitle">We craft elevated journeys that transcend ordinary sightseeing, uniting luxury, local culture, and conservation.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">🏰</div>
+            <h3 class="feature-title">Handpicked Luxury Stays</h3>
+            <p class="feature-desc">Cliffside Amalfi cave villas, overwater Bora Bora suites, traditional Kyoto ryokans, and luxury mobile safari camps.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">🧭</div>
+            <h3 class="feature-title">Local Master Guides</h3>
+            <p class="feature-desc">Native storytellers, marine biologists, licensed historians, and mountain guides with VIP skip-the-line privileges.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">🛡️</div>
+            <h3 class="feature-title">100% Flexible Booking</h3>
+            <p class="feature-desc">Cancel or reschedule up to 30 days prior to departure for zero penalty fees, backed by comprehensive travel protection.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">🌱</div>
+            <h3 class="feature-title">100% Carbon Neutral</h3>
+            <p class="feature-desc">Every flight, private charter, and safari mile is offset through verified reforestation and community conservation projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Expeditions Catalog Section -->
+    <section class="section section-catalog" id="catalog-section">
+      <div class="container">
+        
+        <div class="catalog-header-wrap">
+          <div>
+            <span class="section-tag">Explore The Catalog</span>
+            <h2 class="section-title">Featured Journeys & Packages</h2>
+            <p class="section-subtitle">Filter by landscape, budget, or travel style to find your dream itinerary.</p>
+          </div>
+          <div class="catalog-results-badge" id="catalog-results-count">
+            Loading journeys...
+          </div>
+        </div>
+
+        <!-- Interactive Filter Controls Bar -->
+        <div class="catalog-controls-card">
+          
+          <!-- Category Pills -->
+          <div class="category-pills-row" role="tablist" aria-label="Destination Categories">
+            <button class="cat-pill active" data-category="all">All Journeys</button>
+            <button class="cat-pill" data-category="beach">🏝️ Coastal & Beach</button>
+            <button class="cat-pill" data-category="mountain">🏔️ Mountain & Snow</button>
+            <button class="cat-pill" data-category="cultural">⛩️ Cultural Heritage</button>
+            <button class="cat-pill" data-category="safari">🦁 Safari & Wildlife</button>
+            <button class="cat-pill" data-category="nordic">❄️ Nordic & Arctic</button>
+            <button class="cat-pill" data-category="desert">✨ Desert & Oasis</button>
+          </div>
+
+          <!-- Secondary Filters Row (Search, Slider, Sort) -->
+          <div class="catalog-secondary-filters">
+            
+            <!-- Real-time Text Search -->
+            <div class="filter-search-box">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="catalog-search-input" placeholder="Search by name, country, or keyword..." />
+            </div>
+
+            <!-- Dynamic Budget Slider -->
+            <div class="filter-budget-box">
+              <div class="budget-slider-labels">
+                <span>Max Budget:</span>
+                <strong id="budget-slider-val">$5,000+</strong>
+              </div>
+              <input type="range" id="budget-slider" min="1500" max="5000" step="100" value="5000" />
+            </div>
+
+            <!-- Sort By Select -->
+            <div class="filter-sort-box">
+              <label for="catalog-sort-select">Sort By:</label>
+              <select id="catalog-sort-select">
+                <option value="recommended">Featured / Curated</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="duration">Duration: Days</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Destinations Dynamic Grid -->
+        <div class="destinations-grid" id="destinations-grid">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Trip Matchmaker Quiz Section -->
+    <section class="section section-matchmaker" id="matchmaker-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Matchmaker</span>
+          <h2 class="section-title">Find Your Perfect Journey</h2>
+          <p class="section-subtitle">Answer 3 quick intuitive questions and let our algorithm match you with tailored expeditions.</p>
+        </div>
+
+        <div class="quiz-container">
+          <!-- Quiz Questions View -->
+          <div id="quiz-questions-container">
+            <!-- Dynamically populated by js/app.js -->
+          </div>
+
+          <!-- Quiz Results View (Initially Hidden) -->
+          <div id="quiz-results-container" style="display: none;">
+            <div class="quiz-results-header">
+              <span class="quiz-result-badge">🎉 Your Ideal Expedition Harmony</span>
+              <h3>Here Are Your Top Curated Matches</h3>
+              <p>Based on your travel companionship, dream landscape, and pace preferences.</p>
+            </div>
+
+            <div class="quiz-matches-grid" id="quiz-matches-cards">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <div class="quiz-results-actions text-center">
+              <button class="btn btn-outline" id="quiz-retake-btn">↻ Retake Matchmaker Quiz</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Packing Checklist Generator Tool -->
+    <section class="section section-packing" id="packing-section">
+      <div class="container">
+        
+        <div class="packing-tool-card">
+          <div class="packing-intro">
+            <span class="section-tag">Travel Utilities</span>
+            <h2 class="section-title">Smart Packing Assistant</h2>
+            <p>Never leave essentials behind. Select your expedition terrain to generate an interactive packing checklist with progress tracking.</p>
+
+            <div class="packing-select-group">
+              <label for="packing-category-select">Select Expedition Terrain:</label>
+              <select id="packing-category-select" class="field-select">
+                <option value="beach">🏝️ Tropical & Coastal Island</option>
+                <option value="mountain">🏔️ High Altitude & Mountain Trek</option>
+                <option value="cultural">⛩️ Historic City & Ancient Temples</option>
+                <option value="safari">🦁 African Bush & Savannah Safari</option>
+                <option value="nordic">❄️ Arctic Glacier & Northern Lights</option>
+                <option value="desert">✨ Desert Dunes & Stargazing Oasis</option>
+              </select>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="packing-progress-wrap">
+              <div class="packing-progress-header">
+                <span>Packing Progress</span>
+                <strong id="packing-progress-text">0 of 8 Packed (0%)</strong>
+              </div>
+              <div class="packing-progress-bar">
+                <div class="packing-progress-fill" id="packing-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="packing-actions">
+              <button class="btn btn-secondary btn-sm" id="print-packing-btn">🖨️ Print / Save Checklist</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Packing Checklist -->
+          <div class="packing-checklist-box">
+            <h3 class="packing-list-title">Checklist Items</h3>
+            <div class="packing-items-list" id="packing-items-list">
+              <!-- Dynamically populated by js/app.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Traveler Reviews & Community Section -->
+    <section class="section section-reviews" id="reviews-section">
+      <div class="container">
+        
+        <div class="section-header-flex">
+          <div>
+            <span class="section-tag">Verified Explorers</span>
+            <h2 class="section-title">Stories From The Trail</h2>
+            <p class="section-subtitle">Real experiences and reflections from travelers across the globe.</p>
+          </div>
+          <div>
+            <button class="btn btn-outline" id="open-review-modal-btn">
+              ✍️ Write a Review
+            </button>
+          </div>
+        </div>
+
+        <div class="reviews-carousel-grid" id="reviews-carousel-grid">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Travel Journal & Guides Section -->
+    <section class="section section-journal" id="journal-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Travel Inspiration</span>
+          <h2 class="section-title">The Voyageur Journal</h2>
+          <p class="section-subtitle">Expert travel photography tips, secret culinary routes, and cultural deep dives.</p>
+        </div>
+
+        <div class="articles-grid" id="articles-grid">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section section-faq" id="faq-section">
+      <div class="container container-sm">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Frequently Asked Questions</span>
+          <h2 class="section-title">Everything You Need to Know</h2>
+          <p class="section-subtitle">Clear answers on bookings, customization, safety, and payment options.</p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- Dynamically populated by js/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Newsletter & VIP Explorer Club -->
+    <section class="section section-newsletter">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <span class="newsletter-badge">Exclusive Privileges</span>
+            <h2 class="newsletter-title">Join The Explorer’s Circle</h2>
+            <p class="newsletter-desc">
+              Subscribe to receive private charter alerts, seasonal discounts, and secret destination guides. Get an instant 15% promo code for your first expedition.
+            </p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="Enter your email address..." required />
+              <button type="submit" class="btn btn-primary">Join & Unlock 15%</button>
+            </form>
+            <span class="newsletter-note">🔒 We value your privacy. Unsubscribe at any time with one click.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col footer-brand">
+        <a href="#hero" class="brand-logo">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+          <div class="brand-text">
+            <span class="brand-name">VOYAGEUR</span>
+            <span class="brand-tagline">EXPEDITIONS</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Crafting unforgettable journeys to the earth's most spectacular sanctuaries. Luxury accommodations, bespoke private guides, and verified 100% carbon-neutral expeditions.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" aria-label="YouTube">▶️ YouTube</a>
+          <a href="#" aria-label="Pinterest">📌 Pinterest</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog-section">Amalfi Coast, Italy</a></li>
+          <li><a href="#catalog-section">Kyoto & Mt. Fuji, Japan</a></li>
+          <li><a href="#catalog-section">Serengeti Safari, Tanzania</a></li>
+          <li><a href="#catalog-section">Swiss Alps, Switzerland</a></li>
+          <li><a href="#catalog-section">Reykjavik & Aurora, Iceland</a></li>
+          <li><a href="#catalog-section">Bora Bora, French Polynesia</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Travel Styles</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog-section">Tropical & Island Overwater</a></li>
+          <li><a href="#catalog-section">Alpine Hikes & Glacier Trains</a></li>
+          <li><a href="#catalog-section">Cultural Heritage & Shrines</a></li>
+          <li><a href="#catalog-section">Big 5 Wildlife Safaris</a></li>
+          <li><a href="#catalog-section">Arctic Aurora Chasing</a></li>
+          <li><a href="#catalog-section">Desert Glamping & Dunes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Concierge & Trust</h4>
+        <ul class="footer-contact-list">
+          <li>📍 Geneva &bull; Paris &bull; Kyoto &bull; New York</li>
+          <li>📞 24/7 Concierge: +1 (800) 869-2438</li>
+          <li>✉️ expeditions@voyageur-travel.com</li>
+          <li>🌿 100% Certified Carbon-Neutral</li>
+          <li>🛡️ Member: International Ecotourism Society</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 VOYAGEUR Expeditions Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sustainability Charter</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- DRAWERS & MODALS -->
+  <!-- ===================================================================== -->
+
+  <!-- Drawer Backdrop Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Slide-Out Bucket List Drawer -->
+  <aside class="slide-drawer" id="bucket-drawer" aria-label="Bucket List Drawer">
+    <div class="drawer-header">
+      <div class="drawer-header-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <h3>Your Saved Bucket List</h3>
+      </div>
+      <button class="drawer-close-btn" id="close-bucket-btn" aria-label="Close Bucket List">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="bucket-list-items">
+      <!-- Rendered dynamically by js/app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-total-row">
+        <span>Estimated Combined Cost:</span>
+        <strong id="bucket-total-price">$0</strong>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="alert('Our concierge team can consolidate your saved journeys into an extended bespoke world tour! Contact us or book each journey individually.')">
+        Inquire for Multi-Trip Package
+      </button>
+    </div>
+  </aside>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="slide-drawer mobile-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-text">
+        <span class="brand-name">VOYAGEUR</span>
+      </div>
+      <button class="drawer-close-btn" id="close-mobile-nav-btn">&times;</button>
+    </div>
+    <div class="drawer-body mobile-drawer-body">
+      <nav class="mobile-nav-list">
+        <a href="#catalog-section" class="mobile-nav-link">Expeditions</a>
+        <a href="#matchmaker-section" class="mobile-nav-link">Trip Matchmaker</a>
+        <a href="#packing-section" class="mobile-nav-link">Packing Tool</a>
+        <a href="#reviews-section" class="mobile-nav-link">Reviews</a>
+        <a href="#journal-section" class="mobile-nav-link">Journal</a>
+        <a href="#faq-section" class="mobile-nav-link">FAQ</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <p>Questions? Call our 24/7 Concierge:</p>
+        <strong>+1 (800) 869-2438</strong>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Detailed Itinerary & Quick View Modal -->
+  <div class="modal-overlay" id="itinerary-modal" role="dialog" aria-modal="true" aria-labelledby="modal-dest-title">
+    <div class="modal-backdrop-close"></div>
+    <div class="modal-dialog modal-dialog-lg">
+      <button class="modal-close-btn" aria-label="Close Itinerary Modal">&times;</button>
+
+      <div class="modal-body-grid">
+        
+        <!-- Left Column: Gallery & Itinerary Accordion -->
+        <div class="modal-col-left">
+          <div class="modal-dest-header">
+            <span class="badge badge-accent" id="modal-dest-badge">Best Seller</span>
+            <span class="modal-country-sub" id="modal-dest-country">Country — Region</span>
+            <h2 class="modal-dest-title" id="modal-dest-title">Trip Title</h2>
+            <div class="modal-meta-row">
+              <span id="modal-dest-duration">7 Days / 6 Nights</span> &bull; 
+              <span id="modal-dest-weather">☀️ 26°C</span> &bull; 
+              <span id="modal-dest-rating">★ 4.96 (180 reviews)</span>
+            </div>
+          </div>
+
+          <!-- Photo Gallery -->
+          <div class="modal-gallery-wrap">
+            <div class="gallery-viewport" id="modal-dest-gallery">
+              <!-- Dynamically populated -->
+            </div>
+            <div class="gallery-thumbs" id="modal-dest-thumbs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Overview Description -->
+          <div class="modal-overview-section">
+            <h3>Expedition Overview</h3>
+            <p id="modal-dest-desc">Description text...</p>
+          </div>
+
+          <!-- Day-by-Day Itinerary -->
+          <div class="modal-itinerary-section">
+            <h3>Day-by-Day Journey</h3>
+            <div class="itinerary-days-accordion" id="modal-dest-days">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Inclusions & Exclusions -->
+          <div class="modal-inclusions-grid">
+            <div class="inc-box">
+              <h4>What's Included</h4>
+              <ul class="inc-list" id="modal-dest-included"></ul>
+            </div>
+            <div class="inc-box not-inc-box">
+              <h4>Not Included</h4>
+              <ul class="inc-list" id="modal-dest-not-included"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Interactive Cost Estimator & Book CTA -->
+        <div class="modal-col-right">
+          <div class="estimator-card sticky-estimator">
+            <h3>Interactive Trip Estimator</h3>
+            <p class="estimator-sub">Customize your suite tier and add-ons with real-time pricing.</p>
+
+            <!-- Number of Travelers -->
+            <div class="estimator-field">
+              <label for="estimator-guests">Number of Travelers:</label>
+              <div class="counter-input-wrap">
+                <button type="button" class="btn-counter" id="guest-minus-btn">-</button>
+                <input type="number" id="estimator-guests" min="1" max="10" value="2" readonly />
+                <button type="button" class="btn-counter" id="guest-plus-btn">+</button>
+              </div>
+            </div>
+
+            <!-- Accommodation Tier -->
+            <div class="estimator-field">
+              <label>Accommodation Tier:</label>
+              <div class="tier-options">
+                <label class="tier-radio-card">
+                  <input type="radio" name="estimator-tier" value="standard" checked />
+                  <div class="tier-info">
+                    <strong>Standard Luxury</strong>
+                    <span>5-Star Boutique Suite (Included)</span>
+                  </div>
+                </label>
+                <label class="tier-radio-card">
+                  <input type="radio" name="estimator-tier" value="luxury" />
+                  <div class="tier-info">
+                    <strong>Signature View Suite</strong>
+                    <span>Private Balcony / Terrace (+ $250/pp)</span>
+                  </div>
+                </label>
+                <label class="tier-radio-card">
+                  <input type="radio" name="estimator-tier" value="ultra" />
+                  <div class="tier-info">
+                    <strong>Presidential / Overwater Villa</strong>
+                    <span>Private Plunge Pool & Butler (+ $600/pp)</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Bespoke Add-ons -->
+            <div class="estimator-field">
+              <label>Optional Add-ons:</label>
+              <div class="addons-list">
+                <label class="addon-checkbox">
+                  <input type="checkbox" class="estimator-addon-check" value="helicopter" />
+                  <span>VIP Airport Helicopter Transfer (+ $200/pp)</span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" class="estimator-addon-check" value="insurance" />
+                  <span>Comprehensive Travel Medical Protection (+ $80/pp)</span>
+                </label>
+                <label class="addon-checkbox">
+                  <input type="checkbox" class="estimator-addon-check" value="photo" />
+                  <span>Personal Private Expedition Photographer (+ $150/pp)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pricing Summary Breakdown -->
+            <div class="estimator-summary-box">
+              <div class="est-summary-row">
+                <span>Estimated per person:</span>
+                <strong id="estimator-per-person">$0</strong>
+              </div>
+              <div class="est-summary-row est-total-row">
+                <span>Total for Group:</span>
+                <span class="est-final-price" id="estimator-total">$0</span>
+              </div>
+              <small class="est-note">Includes all local taxes, breakfast, transfers & guides.</small>
+            </div>
+
+            <button class="btn btn-primary btn-block btn-lg" id="modal-book-now-btn">
+              Proceed to Reserve Trip
+            </button>
+            <p class="lock-guarantee">🔒 No immediate charge. Free 30-day cancellation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step Booking Simulator Modal -->
+  <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <div class="modal-backdrop-close"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close Booking Modal">&times;</button>
+
+      <!-- Booking Form Step View -->
+      <div id="checkout-step-form">
+        <div class="checkout-header">
+          <span class="badge badge-accent">Secure Reservation</span>
+          <h2 id="booking-modal-title">Complete Your Reservation</h2>
+          <p>Confirm your traveler details and dates. Our concierge will contact you within 24 hours.</p>
+        </div>
+
+        <!-- Trip Summary Mini Card -->
+        <div class="booking-mini-summary">
+          <img src="" id="book-summary-thumb" alt="Destination thumbnail" />
+          <div>
+            <h4 id="book-summary-title">Trip Title</h4>
+            <span id="book-summary-duration">7 Days / 6 Nights</span>
+          </div>
+        </div>
+
+        <form id="checkout-form">
+          <!-- Step 1: Dates & Guests -->
+          <div class="checkout-section">
+            <h4 class="checkout-step-title">1. Dates & Travel Party</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="book-date-input">Estimated Departure Date:</label>
+                <input type="date" id="book-date-input" required />
+              </div>
+              <div class="form-group">
+                <label for="book-guests-input">Number of Explorers:</label>
+                <input type="number" id="book-guests-input" min="1" max="12" value="2" required />
+              </div>
+            </div>
+
+            <!-- Accommodation Tier in Checkout -->
+            <div class="form-group">
+              <label>Suite Preference:</label>
+              <div class="tier-radio-group-compact">
+                <label><input type="radio" name="book-tier" value="standard" checked /> Standard Boutique</label>
+                <label><input type="radio" name="book-tier" value="luxury" /> Signature (+ $250/pp)</label>
+                <label><input type="radio" name="book-tier" value="ultra" /> Villa Upgrade (+ $600/pp)</label>
+              </div>
+            </div>
+
+            <!-- Addons in Checkout -->
+            <div class="form-group">
+              <label>Include Add-ons:</label>
+              <div class="addons-compact">
+                <label><input type="checkbox" class="book-addon-check" value="helicopter" /> Helicopter Transfer (+ $200/pp)</label>
+                <label><input type="checkbox" class="book-addon-check" value="insurance" /> Travel Protection (+ $80/pp)</label>
+                <label><input type="checkbox" class="book-addon-check" value="photo" /> Private Photographer (+ $150/pp)</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Primary Traveler Info -->
+          <div class="checkout-section">
+            <h4 class="checkout-step-title">2. Primary Explorer Information</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="book-fullname">Full Name:</label>
+                <input type="text" id="book-fullname" placeholder="Lord / Lady / Dr / Mr / Ms..." required />
+              </div>
+              <div class="form-group">
+                <label for="book-email">Email Address:</label>
+                <input type="email" id="book-email" placeholder="explorer@domain.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="book-phone">Phone Number (with Country Code):</label>
+                <input type="tel" id="book-phone" placeholder="+1 (555) 000-0000" required />
+              </div>
+              <div class="form-group">
+                <label for="book-dietary">Dietary / Special Wishes:</label>
+                <input type="text" id="book-dietary" placeholder="e.g. Vegetarian, Anniversary celebration..." />
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Promo Coupon & Payment Simulation -->
+          <div class="checkout-section">
+            <h4 class="checkout-step-title">3. Promo Code & Payment Simulation</h4>
+            
+            <div class="coupon-input-group">
+              <input type="text" id="checkout-coupon-input" placeholder="Promo code (e.g. VOYAGE15)" />
+              <button type="button" class="btn btn-secondary" id="apply-coupon-btn">Apply</button>
+            </div>
+            <div id="coupon-status-msg" class="coupon-msg"></div>
+
+            <!-- Price Breakdown -->
+            <div class="checkout-pricing-box">
+              <div class="price-row">
+                <span>Trip Subtotal:</span>
+                <span id="book-subtotal-price">$0</span>
+              </div>
+              <div class="price-row text-success" id="book-discount-row" style="display: none;">
+                <span>Promo Discount:</span>
+                <span id="book-discount-price">-$0</span>
+              </div>
+              <div class="price-row total-row">
+                <span>Estimated Total:</span>
+                <strong id="book-final-total">$0</strong>
+              </div>
+            </div>
+
+            <!-- Payment Method Simulator Tabs -->
+            <div class="payment-sim-box">
+              <label>Select Simulated Payment Method:</label>
+              <div class="payment-tabs">
+                <label class="payment-tab active">
+                  <input type="radio" name="pay-method" value="card" checked /> 💳 Credit / Debit Card
+                </label>
+                <label class="payment-tab">
+                  <input type="radio" name="pay-method" value="applepay" /> 🍏 Apple Pay / Google Pay
+                </label>
+                <label class="payment-tab">
+                  <input type="radio" name="pay-method" value="concierge" /> 🏛️ Private Wire / Concierge Invoice
+                </label>
+              </div>
+
+              <div class="card-inputs-mock" id="card-mock-fields">
+                <input type="text" placeholder="Card Number (e.g. 4000 1234 5678 9010)" maxlength="19" />
+                <div class="form-row">
+                  <input type="text" placeholder="MM/YY" maxlength="5" />
+                  <input type="text" placeholder="CVC" maxlength="4" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-booking-btn">
+            Confirm & Reserve Expedition
+          </button>
+        </form>
+      </div>
+
+      <!-- Booking Confirmation Success Screen (Initially Hidden) -->
+      <div id="checkout-success-view" style="display: none;" class="checkout-success-container">
+        <div class="success-icon-wrap">🎉</div>
+        <span class="badge badge-accent">Booking Reserved Successfully</span>
+        <h2 class="success-title">Welcome to Your Next Great Adventure!</h2>
+        <p class="success-desc">
+          Your reservation request has been processed. A private Voyageur travel designer will reach out within 24 hours with your bespoke itinerary packet.
+        </p>
+
+        <div class="confirmation-ticket-card">
+          <div class="ticket-header">
+            <span>EXPEDITION CONFIRMATION</span>
+            <strong id="conf-ref-number">BK-VOY-773921</strong>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-row">
+              <span>Journey:</span>
+              <strong id="conf-dest-title">Amalfi Coast & Capri Escapade</strong>
+            </div>
+            <div class="ticket-row">
+              <span>Departure:</span>
+              <strong id="conf-travel-date">November 15, 2026</strong>
+            </div>
+            <div class="ticket-row">
+              <span>Travelers:</span>
+              <strong id="conf-travelers-count">2 Explorers</strong>
+            </div>
+            <div class="ticket-row">
+              <span>Total Estimated:</span>
+              <strong id="conf-total-amount" class="text-accent">$4,900</strong>
+            </div>
+            <div class="ticket-row">
+              <span>Confirmation Sent To:</span>
+              <strong id="conf-traveler-email">user@domain.com</strong>
+            </div>
+          </div>
+          <div class="ticket-footer">
+            <span>🌿 100% Carbon Neutral Certified Guarantee</span>
+          </div>
+        </div>
+
+        <div class="success-actions text-center">
+          <button class="btn btn-primary" onclick="document.getElementById('booking-modal').classList.remove('active'); document.body.style.overflow='';">
+            Done & Return to Expeditions
+          </button>
+          <button class="btn btn-outline" onclick="window.print();">
+            🖨️ Print Confirmation
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Review Submission Modal -->
+  <div class="modal-overlay" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
+    <div class="modal-backdrop-close"></div>
+    <div class="modal-dialog modal-dialog-sm">
+      <button class="modal-close-btn" aria-label="Close Review Modal">&times;</button>
+
+      <div class="modal-header">
+        <h2 id="review-modal-title">Share Your Travel Story</h2>
+        <p>Help future explorers choose their next journey with your authentic thoughts.</p>
+      </div>
+
+      <form id="submit-review-form">
+        <div class="form-group">
+          <label for="review-input-name">Your Full Name:</label>
+          <input type="text" id="review-input-name" placeholder="e.g. Charlotte & James Dupont" required />
+        </div>
+        <div class="form-group">
+          <label for="review-input-location">Your City / Country:</label>
+          <input type="text" id="review-input-location" placeholder="e.g. Montreal, Canada" />
+        </div>
+        <div class="form-group">
+          <label for="review-dest-select">Destination Traveled:</label>
+          <select id="review-dest-select" class="field-select">
+            <!-- Dynamically populated -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review-input-rating">Your Star Rating:</label>
+          <select id="review-input-rating" class="field-select">
+            <option value="5">★★★★★ (5/5) — Extraordinary</option>
+            <option value="4">★★★★☆ (4/5) — Wonderful</option>
+            <option value="3">★★★☆☆ (3/5) — Good</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review-input-text">Your Travel Review:</label>
+          <textarea id="review-input-text" rows="4" placeholder="Tell us about the highlights, accommodations, guides, or unexpected moments..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          Publish Travel Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Travel Article Reader Modal -->
+  <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="art-modal-title">
+    <div class="modal-backdrop-close"></div>
+    <div class="modal-dialog modal-dialog-md">
+      <button class="modal-close-btn" aria-label="Close Article Modal">&times;</button>
+
+      <article class="article-modal-content">
+        <span class="article-modal-meta" id="art-modal-meta">Author &bull; Date &bull; Read Time</span>
+        <h2 id="art-modal-title" class="article-modal-title">Article Title</h2>
+        <img src="" id="art-modal-img" alt="Article banner" class="article-modal-img" />
+        <div class="article-modal-body" id="art-modal-body"></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="js/destinations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
